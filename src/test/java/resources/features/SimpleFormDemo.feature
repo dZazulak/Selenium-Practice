@@ -1,3 +1,4 @@
+@Regression
 Feature: Simple Forms Demo
   Scenario: As a user, I want to be able to input information into simple forms to show a message
     Given The user is on the Selenium Easy website
