@@ -1,6 +1,7 @@
 package E2E.runner;
 
 import E2E.poms.CheckBoxDemoIndex;
+import E2E.poms.RadioButtonsDemoIndex;
 import E2E.poms.SimpleFormDemoIndex;
 import E2E.steps.SimpleFormDemoSteps;
 import io.cucumber.junit.Cucumber;
@@ -19,7 +20,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/resources/features", tags = "@Functional", glue = "E2E.steps", plugin = {"pretty",
+@CucumberOptions(features = "src/test/java/resources/features", tags = "@Regression", glue = "E2E.steps", plugin = {"pretty",
         "html:src/test/java/resources/reports/html-reports.html"})
 public class TestRunner {
 
@@ -27,6 +28,7 @@ public class TestRunner {
     public static WebDriverWait explicitWait;
     public static SimpleFormDemoIndex simpleFormDemo;
     public static CheckBoxDemoIndex checkBoxDemo;
+    public static RadioButtonsDemoIndex radioButtonsDemo;
 
     @BeforeClass
     public static void setup() throws IOException {
@@ -37,6 +39,7 @@ public class TestRunner {
 
         simpleFormDemo = new SimpleFormDemoIndex(driver);
         checkBoxDemo = new CheckBoxDemoIndex(driver);
+        radioButtonsDemo = new RadioButtonsDemoIndex(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));

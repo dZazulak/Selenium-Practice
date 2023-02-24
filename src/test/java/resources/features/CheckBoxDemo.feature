@@ -1,4 +1,4 @@
-@Functional
+@Regression
 Feature: Checkbox Demo
   Scenario: As a user I want to be able to click on a checkbox to get the success message
     Given The user is on the Selenium Easy website
