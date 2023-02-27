@@ -17,13 +17,13 @@ This repository implements the poms, steps, features, and TestRunner to use Sele
 
 ## Getting Started
 You may install the code using the git clone command below:
-'''
+```
 git clone https://github.com/dZazulak/Selenium-Practice.git
-'''
+```
 To install necessary dependencies, run the following command:
-'''
+```
 pip install <package name>
-'''
+```
 #### Packages used:
   - Selenium
   
