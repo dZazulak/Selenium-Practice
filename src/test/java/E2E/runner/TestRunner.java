@@ -1,8 +1,6 @@
 package E2E.runner;
 
-import E2E.poms.CheckBoxDemoIndex;
-import E2E.poms.RadioButtonsDemoIndex;
-import E2E.poms.SimpleFormDemoIndex;
+import E2E.poms.*;
 import E2E.steps.SimpleFormDemoSteps;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -26,10 +24,11 @@ public class TestRunner {
 
     public static WebDriver driver;
     public static WebDriverWait explicitWait;
+    public static CertificateIndex certificate;
     public static SimpleFormDemoIndex simpleFormDemo;
     public static CheckBoxDemoIndex checkBoxDemo;
     public static RadioButtonsDemoIndex radioButtonsDemo;
-
+    public static SelectDropdownListIndex selectDropdownListDemo;
     @BeforeClass
     public static void setup() throws IOException {
         File file = new File("src/test/java/resources/chromedriver.exe");
@@ -37,9 +36,11 @@ public class TestRunner {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
+        certificate = new CertificateIndex(driver);
         simpleFormDemo = new SimpleFormDemoIndex(driver);
         checkBoxDemo = new CheckBoxDemoIndex(driver);
         radioButtonsDemo = new RadioButtonsDemoIndex(driver);
+        selectDropdownListDemo = new SelectDropdownListIndex(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));
