@@ -29,6 +29,8 @@ public class TestRunner {
     public static CheckBoxDemoIndex checkBoxDemo;
     public static RadioButtonsDemoIndex radioButtonsDemo;
     public static SelectDropdownListIndex selectDropdownListDemo;
+    public static InputFormSubmitIndex inputFormSubmitDemo;
+
     @BeforeClass
     public static void setup() throws IOException {
         File file = new File("src/test/java/resources/chromedriver.exe");
@@ -41,6 +43,7 @@ public class TestRunner {
         checkBoxDemo = new CheckBoxDemoIndex(driver);
         radioButtonsDemo = new RadioButtonsDemoIndex(driver);
         selectDropdownListDemo = new SelectDropdownListIndex(driver);
+        inputFormSubmitDemo = new InputFormSubmitIndex(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));
