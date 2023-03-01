@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,6 +21,7 @@ public class SimpleFormDemoSteps {
     }
     @When("The user clicks on Input forms dropdown")
     public void the_user_clicks_on_input_forms_dropdown() {
+        TestRunner.explicitWait.until(ExpectedConditions.visibilityOf(TestRunner.simpleFormDemo.inputFormDropdown));
         TestRunner.simpleFormDemo.inputFormDropdown.click();
     }
     @When("The user clicks on Simple Form Demo")

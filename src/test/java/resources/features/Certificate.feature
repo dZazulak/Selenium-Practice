@@ -1,4 +1,4 @@
-@Regression
+@Functional
 Feature: Certificate - Connection is not private page
   Scenario: As a user, I want to be able to get past the connection is not private
     Given The user is on the Selenium Easy website

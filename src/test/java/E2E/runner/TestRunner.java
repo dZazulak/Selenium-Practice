@@ -30,6 +30,7 @@ public class TestRunner {
     public static RadioButtonsDemoIndex radioButtonsDemo;
     public static SelectDropdownListIndex selectDropdownListDemo;
     public static InputFormSubmitIndex inputFormSubmitDemo;
+    public static AjaxFormSubmitIndex ajaxFormSubmitDemo;
 
     @BeforeClass
     public static void setup() throws IOException {
@@ -44,6 +45,7 @@ public class TestRunner {
         radioButtonsDemo = new RadioButtonsDemoIndex(driver);
         selectDropdownListDemo = new SelectDropdownListIndex(driver);
         inputFormSubmitDemo = new InputFormSubmitIndex(driver);
+        ajaxFormSubmitDemo = new AjaxFormSubmitIndex(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));
