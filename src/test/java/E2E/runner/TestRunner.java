@@ -31,6 +31,7 @@ public class TestRunner {
     public static SelectDropdownListIndex selectDropdownListDemo;
     public static InputFormSubmitIndex inputFormSubmitDemo;
     public static AjaxFormSubmitIndex ajaxFormSubmitDemo;
+    public static JQuerySelectIndex jQuerySelectDemo;
 
     @BeforeClass
     public static void setup() throws IOException {
@@ -46,9 +47,10 @@ public class TestRunner {
         selectDropdownListDemo = new SelectDropdownListIndex(driver);
         inputFormSubmitDemo = new InputFormSubmitIndex(driver);
         ajaxFormSubmitDemo = new AjaxFormSubmitIndex(driver);
+        jQuerySelectDemo = new JQuerySelectIndex(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         System.out.println("Set up complete");
 
     }

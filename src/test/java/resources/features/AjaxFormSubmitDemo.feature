@@ -1,7 +1,7 @@
 @Regression
 Feature: Ajax Form Submit
 
-  Background:
+  Background: User is able to click past the Certificate error
     Given The user is on the Selenium Easy website
     When The certificate error pops up
     When The user clicks on the advanced button
